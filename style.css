@@ -1,0 +1,303 @@
+body,
+*,html {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
+  
+}
+
+/*  CSS for the navigation bar */
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    border-color: #333;
+}
+
+.nav-link {
+    color: #333;
+    /* font-weight: 600; */
+}
+
+/* Highlight the active link */
+.nav-item.active {
+    background-color: #f8f9fa;
+}
+
+
+
+#navItems li a {
+    transition: all .3s ease;
+}
+
+#navItems li a:focus,
+#navItems li a:hover {
+    color: #d2c196;
+    border-radius: 6px;
+    border-bottom: 3px solid;
+}
+
+
+.navbar.navbar-light.sticky-top {
+    padding-top: 10px;
+    padding-bottom: 18px;
+    padding-left: 24px;
+}
+
+.nav-item {
+    margin-left: 34px;
+    font-size: 1.2rem;
+}
+
+.nav-item a {
+    font-size: 1.2rem;
+}
+
+/* bradcrump background */
+
+#maine{
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background: url("img/back.webp");
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.2)
+
+}
+.fadeInUp h1{
+    font-size: 3rem;
+}
+
+/* properties container */
+
+.select-customize select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #818181;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.select-customize select.form-control::after {
+    content: '\f107'; 
+    font-family: 'Font Awesome'; 
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    pointer-events: none; 
+}
+
+/* Style the select arrow on hover */
+.select-customize select.form-control:hover::after {
+    color: #d2c196; 
+}
+
+
+.select-customize select.form-control:focus::after {
+    color: #d2c196;
+}
+
+/* Optional: Add a box shadow on focus */
+.select-customize select.form-control:focus {
+    box-shadow: 0 0 5px #d2c196;
+    outline: none;
+}
+
+#search,#reset-filters{
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    font-weight: bold;
+    background-color: #d9caa6;
+    font-size: 1.1rem;
+    transition: all .3s ease;
+}
+#reset-filters{
+    background-color:#a93131;
+
+}
+#search:focus,
+#search:hover,
+#reset-filters:hover,
+#reset-filters:focus
+{
+
+background-color: #333;
+
+}
+
+
+.list_img{
+    position: relative;
+    border-radius: 44px;
+    border-radius: 16px;
+    transition: transform 0.5s ease;
+   
+}
+
+
+.listing_img:hover .list_img {
+    transform: scale(1.05); 
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+.img-thumbnail {
+    padding:0;
+    background-color: #fff;
+    border: none;
+    /* max-width: 117%; */
+    height: auto;
+}
+.tag_type{
+    position: absolute;
+    top: 12px;
+    right: 4px;
+    font-size: 15px;
+    background-color: #267188d9;
+    padding: 0px 13px;
+    text-align: center;
+    color: #fff;
+    line-height: 21px;
+    border-radius: 13px;
+}
+.tag_location{
+    position: absolute;
+    right: 177px;
+    top: 142px;
+    font-size: 13px;
+    background-color: #d9caa6;
+    padding: 0px 13px;
+    text-align: center;
+    color: #fff;
+    line-height: 21px;
+    border-radius: 13px;
+}
+.listing_unit_price{
+    font-size: 1.5rem;
+    color: #267188d9;
+}
+.listing_heading{
+    margin-top: -4px;
+}
+.listing_heading a{
+    font-size: 1.4rem;
+    color: #000;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+.listing_heading a:hover{
+   
+    color: #267188d9;
+}
+.listing_details a{
+    font-size: 1rem;
+    color: #8b8b8b;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+.property_listing_details{
+    display: flex;
+    justify-content: space-between;
+}
+.property_listing_details_item{
+    display: flex;
+}
+.icon_label img{
+    height: 25px;
+    width: 76px;
+    margin-left: -22px;
+}
+.icon_label span{
+    color: #625d5dba;
+    margin-left: -14px;
+    font-size: 17px;
+}
+/* media qurey */
+
+@media (max-width: 1175px) {
+    .tag_location{
+        top: 115px;
+    }
+}
+@media (max-width: 947px) {
+    .tag_location{
+        top: 191px;
+    right: 231px;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav.ml-auto {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 749px) {
+    .tag_location{
+        top: 307px;
+        right: 444px;
+
+    }
+}
+@media (max-width: 526px) {
+    .tag_location{
+        top: 282px;
+    right: 408px;
+
+    }
+}
+@media (max-width: 463px) {
+    .tag_location{
+        right: 31px;
+    top: 283px;
+    font-size: 20px;
+
+    }
+}
+@media (max-width: 409px) {
+    .tag_location{
+      
+     top: 247px;
+   
+
+    }
+}
+@media (max-width: 386px) {
+    .tag_location{
+      
+        top: 186px;
+   
+
+    }
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties Listing</title>
+
+  <!-- bootsrap link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- google font cdn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand mr-5" href="#"><img src="img/logo.png" alt="" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto mr-5" id="navItems">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Properties</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- body backgroun -->
+  <section id="maine">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 text-center fadeInUp">
+          <h1 class="mb-2 font-weight-bold text-capitalize">Properties</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="propertyListing">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-3 searchBox pr-lg-5">
+          <h3 class="font-weight-bold">Advance Search</h3>
+          <form class="search-form mt-lg-4">
+            <div class="form-group select-customize type">
+              <label for="Type">Type</label>
+              <select class="form-control" id="Type" aria-label="Default select example">
+                <option>All</option>
+                <option>Rent</option>
+                <option>Sales</option>
+              </select>
+            </div>
+            <div class="form-group select-customize PropertyCategories">
+              <label for="PropertyCategories">Categories</label>
+              <select class="form-control" id="PropertyCategories">
+                <option>Property Category</option>
+                <option>Apartment</option>
+                <option>Villa</option>
+                <option>Penthouse</option>
+                <option>Duplex</option>
+              </select>
+            </div>
+
+            <div class="form-group select-customize state">
+              <label for="state">State</label>
+              <select class="form-control" id="state">
+                <option>Select State</option>
+                <option value="New York">New York</option>
+                <option value="California">California</option>
+                <option value="Texas">Texas</option>
+              </select>
+            </div>
+            <div class="form-group select-customize city">
+              <label for="city">Select City</label>
+              <select class="form-control" id="city">
+                <option value="">Select a city</option>
+              </select>
+            </div>
+            <div class="form-group select-customize bedrooms">
+              <label for="bedrooms">Min Beds</label>
+              <select class="form-control" id="bedrooms">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group select-customize bathrooms">
+              <label for="bathrooms">Min Bathroom</label>
+              <select class="form-control" id="bathrooms">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary" id="search">Search</button>
+            <button id="reset-filters" class="btn btn-primary mt-3">
+              Reset Filters
+            </button>
+          </form>
+        </div>
+        <div class="col-lg-9" id="propertyListings">
+          <!-- <div class="row mt-5">
+            <div class="col-md-6 col-lg-4">
+              <div class="listing_img" >
+               
+                <a href="#">
+              
+                  <img src="img/property_img/1.webp" alt=""   class="lazyload  list_img img-thumbnail " loading="lazy"/></a>
+                <div class="tag_type">sales</div>
+                <div class="tag_location">Mumbai</div>
+
+              </div>
+              <div class="listing_unit_price  pt-2">
+                $ 10,000,000
+              </div>
+              <h4 class=" listing_heading">
+                <a href="#" class="mt-0">Signature Villa For Sale</a>
+              </h4>
+              <div class="listing_details" style="display:block">
+             <a href="#">
+              Mineral Reserves: 2008 core drilling and testing on just 60 of the 1,100 a..
+             </a></div>
+              <div class="property_listing_details mr-0">
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img src="img/icons/bed.svg"><span>5</span></div>
+                </div>
+
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img
+                      src="img/icons/bath.svg"><span>6</span></div>
+                </div>
+                <div class="property_listing_details_item mt-2" >
+                  <div class="icon_label"><img src="img/icons/size-.svg">
+                    <span style="margin-left: -19px;">190 ft<sup>2</sup></span>
+                  </div>
+                </div>
+               
+              </div>
+
+            </div>
+          <div class="col-md-6 col-lg-4">
+              <div class="listing_img" >
+               
+                <a href="#">
+              
+                  <img src="img/property_img/1.webp" alt=""   class="lazyload  list_img img-thumbnail " loading="lazy"/></a>
+                <div class="tag_type">sales</div>
+                <div class="tag_location">Mumbai</div>
+
+              </div>
+              <div class="listing_unit_price  pt-2">
+                $ 10,000,000
+              </div>
+              <h4 class=" listing_heading">
+                <a href="#" class="mt-0">Signature Villa For Sale</a>
+              </h4>
+              <div class="listing_details" style="display:block">
+             <a href="#">
+              Mineral Reserves: 2008 core drilling and testing on just 60 of the 1,100 a..
+             </a></div>
+              <div class="property_listing_details mr-0">
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img src="img/icons/bed.svg"><span>5</span></div>
+                </div>
+
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img
+                      src="img/icons/bath.svg"><span>6</span></div>
+                </div>
+                <div class="property_listing_details_item mt-2" >
+                  <div class="icon_label"><img src="img/icons/size-.svg">
+                    <span style="margin-left: -19px;">190 ft<sup>2</sup></span>
+                  </div>
+                </div>
+               
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="listing_img " >
+               
+                <a href="#">
+              
+                  <img src="img/property_img/1.webp" alt=""   class="lazyload  list_img img-thumbnail " loading="lazy"/></a>
+                <div class="tag_type">sales</div>
+                <div class="tag_location">Mumbai</div>
+
+              </div>
+              <div class="listing_unit_price  pt-2">
+                $ 10,000,000
+              </div>
+              <h4 class=" listing_heading">
+                <a href="#" class="mt-0">Signature Villa For Sale</a>
+              </h4>
+              <div class="listing_details" style="display:block">
+             <a href="#">
+              Mineral Reserves: 2008 core drilling and testing on just 60 of the 1,100 a..
+             </a></div>
+              <div class="property_listing_details mr-0">
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img src="img/icons/bed.svg"><span>5</span></div>
+                </div>
+
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img
+                      src="img/icons/bath.svg"><span>6</span></div>
+                </div>
+                <div class="property_listing_details_item mt-2" >
+                  <div class="icon_label"><img src="img/icons/size-.svg">
+                    <span style="margin-left: -19px;">190 ft<sup>2</sup></span>
+                  </div>
+                </div>
+               
+              </div>
+
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-6 col-lg-4">
+              <div class="listing_img " >
+               
+                <a href="#">
+              
+                  <img src="img/property_img/1.webp" alt=""   class="lazyload  list_img img-thumbnail " loading="lazy"/></a>
+                <div class="tag_type">sales</div>
+                <div class="tag_location">Mumbai</div>
+
+              </div>
+              <div class="listing_unit_price  pt-2">
+                $ 10,000,000
+              </div>
+              <h4 class=" listing_heading">
+                <a href="#" class="mt-0">Signature Villa For Sale</a>
+              </h4>
+              <div class="listing_details" style="display:block">
+             <a href="#">
+              Mineral Reserves: 2008 core drilling and testing on just 60 of the 1,100 a..
+             </a></div>
+              <div class="property_listing_details mr-0">
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img src="img/icons/bed.svg"><span>5</span></div>
+                </div>
+
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img
+                      src="img/icons/bath.svg"><span>6</span></div>
+                </div>
+                <div class="property_listing_details_item mt-2" >
+                  <div class="icon_label"><img src="img/icons/size-.svg">
+                    <span style="margin-left: -19px;">190 ft<sup>2</sup></span>
+                  </div>
+                </div>
+               
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="listing_img " >
+               
+                <a href="#">
+              
+                  <img src="img/property_img/1.webp" alt=""   class="lazyload  list_img img-thumbnail " loading="lazy"/></a>
+                <div class="tag_type">sales</div>
+                <div class="tag_location">Mumbai</div>
+
+              </div>
+              <div class="listing_unit_price  pt-2">
+                $ 10,000,000
+              </div>
+              <h4 class=" listing_heading">
+                <a href="#" class="mt-0">Signature Villa For Sale</a>
+              </h4>
+              <div class="listing_details" style="display:block">
+             <a href="#">
+              Mineral Reserves: 2008 core drilling and testing on just 60 of the 1,100 a..
+             </a></div>
+              <div class="property_listing_details mr-0">
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img src="img/icons/bed.svg"><span>5</span></div>
+                </div>
+
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img
+                      src="img/icons/bath.svg"><span>6</span></div>
+                </div>
+                <div class="property_listing_details_item mt-2" >
+                  <div class="icon_label"><img src="img/icons/size-.svg">
+                    <span style="margin-left: -19px;">190 ft<sup>2</sup></span>
+                  </div>
+                </div>
+               
+              </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="listing_img " >
+               
+                <a href="#">
+              
+                  <img src="img/property_img/1.webp" alt=""   class="lazyload  list_img img-thumbnail " loading="lazy"/></a>
+                <div class="tag_type">sales</div>
+                <div class="tag_location">Mumbai</div>
+
+              </div>
+              <div class="listing_unit_price  pt-2">
+                $ 10,000,000
+              </div>
+              <h4 class=" listing_heading">
+                <a href="#" class="mt-0">Signature Villa For Sale</a>
+              </h4>
+              <div class="listing_details" style="display:block">
+             <a href="#">
+              Mineral Reserves: 2008 core drilling and testing on just 60 of the 1,100 a..
+             </a></div>
+              <div class="property_listing_details mr-0">
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img src="img/icons/bed.svg"><span>5</span></div>
+                </div>
+
+                <div class="property_listing_details_item mt-2">
+                  <div class="icon_label"><img
+                      src="img/icons/bath.svg"><span>6</span></div>
+                </div>
+                <div class="property_listing_details_item mt-2" >
+                  <div class="icon_label"><img src="img/icons/size-.svg">
+                    <span style="margin-left: -19px;">190 ft<sup>2</sup></span>
+                  </div>
+                </div>
+               
+              </div>
+
+            </div>
+            
+          </div> -->
+
+
+
+        </div>
+
+      </div>
+      <!-- Pagination Controls -->
+      <div class="pagination">
+        <button id="prevPage" disabled>Previous</button>
+        <button id="nextPage">Next</button>
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <!--  Bootstrap JS  -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <!-- gsap cdn link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
